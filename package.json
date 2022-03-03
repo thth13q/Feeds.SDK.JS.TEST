@@ -1,6 +1,6 @@
 {
   "name": "@feedsdevtest/sdk",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,7 +35,7 @@
   "files": [
     "dist"
   ],
-  "author": "feedc",
+  "author": "thth13",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/thth13q/Feeds.SDK.JS.TEST/issues"
