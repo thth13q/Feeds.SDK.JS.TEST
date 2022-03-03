@@ -11,7 +11,7 @@
     "build": "rimraf ./dist && webpack",
     "publish": "npm run tsc && npm publish --access public"
   },
-  "repository": "git://github.com/thth13q/Feeds.SDK.JS.TEST",
+  "repository": "git://github.com:thth13q/Feeds.SDK.JS.TEST.git",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
@@ -38,7 +38,7 @@
   "author": "feedc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FeedsDev/Feeds.SDK.JS.TEST/issues"
+    "url": "https://github.com/thth13q/Feeds.SDK.JS.TEST/issues"
   },
-  "homepage": "https://github.com/FeedsDev/Feeds.SDK.JS.TEST#readme"
+  "homepage": "https://github.com/thth13q/Feeds.SDK.JS.TEST#readme"
 }
