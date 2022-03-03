@@ -11,10 +11,6 @@
     "build": "rimraf ./dist && webpack",
     "publish": "npm run tsc && npm publish --access public"
   },
-  "repository": "git://github.com/thth13q/Feeds.SDK.JS.TEST.git",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "dependencies": {
     "axios": "^0.21.1"
   },
@@ -36,9 +32,5 @@
     "dist"
   ],
   "author": "thth13",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thth13q/Feeds.SDK.JS.TEST/issues"
-  },
-  "homepage": "https://github.com/thth13q/Feeds.SDK.JS.TEST#readme"
+  "license": "ISC"
 }
