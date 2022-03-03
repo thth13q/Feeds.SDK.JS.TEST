@@ -1,5 +1,5 @@
 {
-  "name": "@feedsdev/sdk",
+  "name": "@feedsdevtest/sdk",
   "version": "0.2.12",
   "description": "",
   "main": "dist/index.js",
