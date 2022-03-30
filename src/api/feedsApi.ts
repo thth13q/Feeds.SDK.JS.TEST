@@ -23,3 +23,10 @@ export const getFeedApi = ({ workspaceId, feedId, pageToken, body }: IFeedReq) =
     .then(res => res.data)
     .catch(err => generateError(err))
 }
+
+export const getCategoriesApi = (workspaceId: number) => {
+  const url = `${FEED_API_URL}/pages/${workspaceId}/categories`
+  return getAxiosInstance().get(url)
+    .then(res => res.data)
+    .catch(err => generateError(err))
+}

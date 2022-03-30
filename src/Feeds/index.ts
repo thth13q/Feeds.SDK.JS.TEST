@@ -11,4 +11,8 @@ export default class Feeds {
   getFeed(feedId: number, pageToken: string, body: object) {
     return api.getFeedApi({ workspaceId: this.workspaceId, feedId, pageToken, body })
   }
+
+  getCategories() {
+    return api.getCategoriesApi(this.workspaceId)
+  }
 }
