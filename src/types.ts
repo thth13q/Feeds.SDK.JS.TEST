@@ -4,7 +4,8 @@ import {
   IPostRes,
   IPostReq,
   IPostSearchReq,
-  IPostSearchRes
+  IPostSearchRes,
+  IReadNotificationsBody
 } from "./Posts/types";
 import {
   IUserRes,
@@ -30,6 +31,9 @@ export interface IFeeds {
 
 export interface IPosts {
   getPost: (postId: string) => Promise<void | AxiosResponse<IPostRes>>;
+  getAllNotifications: (customerId: string, pageToken?: string) => Promise<void | AxiosResponse<any>>; // Fix axiosresp type
+  getUnreadNotificationsCount: (customerId: string, pageToken?: string) => Promise<void | AxiosResponse<any>>; // Fix axiosresp type
+  readNotifications: (customerId: string, body: IReadNotificationsBody) => Promise<void | AxiosResponse<any>>; // Fix axiosresp type
   createPost: (body: IPostReq) => Promise<void | AxiosResponse<IPostRes>>;
   publishPost: (postId: string) => Promise<void | AxiosResponse<IPostRes>>;
   updatePost: (

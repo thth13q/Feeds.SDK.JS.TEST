@@ -9,6 +9,18 @@ interface IPostReq {
   body?: object;
 }
 
+interface INotificationsReq {
+  workspaceId: number;
+  customerId?: string;
+  pageToken?: string;
+}
+
+interface INotificationsReadReq {
+  workspaceId: number;
+  customerId: string;
+  body: any;
+}
+
 interface ISearchReq {
   workspaceId: number;
   pageToken?: string;
@@ -30,6 +42,23 @@ export const publishPostApi = ({ workspaceId, postId }: IPostReq) =>
 export const getPostApi = ({ workspaceId, postId }: IPostReq) =>
   getAxiosInstance()
     .get(`${POSTS_API_URL}/pages/${workspaceId}/posts/${postId}`)
+    .catch(err => generateError(err));
+
+export const getAllNotificationsApi = ({ workspaceId, customerId, pageToken }: INotificationsReq) =>
+  getAxiosInstance()
+    .post(`${POSTS_API_URL}/pages/${workspaceId}/notifications/${customerId}`, {
+      pageToken
+    })
+    .catch(err => generateError(err));
+
+export const getUnreadNotificationsCountApi = ({ workspaceId, customerId }: INotificationsReq) =>
+    getAxiosInstance()
+      .get(`${POSTS_API_URL}/pages/${workspaceId}/notifications/count/${customerId}`)
+      .catch(err => generateError(err));
+
+export const readNotificationsApi = ({ workspaceId, customerId, body }: INotificationsReadReq) =>
+  getAxiosInstance()
+    .put(`${POSTS_API_URL}/pages/${workspaceId}/notifications/${customerId}`, body)
     .catch(err => generateError(err));
 
 export const updatePostApi = ({ workspaceId, postId, body }: IPostReq) =>

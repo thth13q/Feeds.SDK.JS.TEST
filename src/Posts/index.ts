@@ -1,6 +1,6 @@
 import { IOptions } from '../types'
 import * as api from '../api'
-import { IPostReq, IPostSearchReq } from './types'
+import { IPostReq, IPostSearchReq, IReadNotificationsBody } from './types'
 
 export default class Posts {
   workspaceId: number
@@ -11,6 +11,18 @@ export default class Posts {
 
   getPost(postId: string) {
     return api.getPostApi({ workspaceId: this.workspaceId, postId })
+  }
+
+  getAllNotifications(customerId: string, pageToken: string) {
+    return api.getAllNotificationsApi({ workspaceId: this.workspaceId, customerId, pageToken })
+  }
+
+  getUnreadNotificationsCount(customerId: string) {
+    return api.getUnreadNotificationsCountApi({ workspaceId: this.workspaceId, customerId })
+  }
+
+  readNotifications(customerId: string, body: IReadNotificationsBody) {
+    return api.readNotificationsApi({ workspaceId: this.workspaceId, customerId, body })
   }
 
   createPost(body: IPostReq) {

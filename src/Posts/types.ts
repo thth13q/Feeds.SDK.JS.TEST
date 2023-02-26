@@ -11,6 +11,10 @@ export interface IPostReq {
   properties: IProperty[]
 }
 
+export interface IReadNotificationsBody {
+  notificationsIds: String[]
+}
+
 export interface IPostRes {
   post: {
     id: string,
