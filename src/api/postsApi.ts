@@ -73,6 +73,11 @@ export const searchPosts = ({ workspaceId, body, pageToken }: ISearchReq) => {
     .catch(err => generateError(err));
 };
 
+export const searchCategory = ({ workspaceId, body }: ISearchReq) => 
+  getAxiosInstance()
+    .post(`${POSTS_API_URL}/pages/${workspaceId}/CategorySearch`, body)
+    .catch(err => generateError(err));
+
 export const deletePostApi = ({ workspaceId, postId }: IPostReq) =>
   getAxiosInstance()
     .delete(`${POSTS_API_URL}/pages/${workspaceId}/posts/${postId}`)

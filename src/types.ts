@@ -44,6 +44,10 @@ export interface IPosts {
     body: IPostSearchReq,
     pageToken?: string
   ) => Promise<void | AxiosResponse<IPostSearchRes>>;
+  searchCategory: (
+    body: IPostSearchReq,
+    pageToken?: string
+  ) => Promise<void | AxiosResponse<IPostSearchRes>>;
   deletePost: (postId: string) => Promise<void | AxiosResponse<IPostRes>>;
   trackInteraction: (
     id: string | number,

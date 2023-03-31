@@ -41,6 +41,10 @@ export default class Posts {
     return api.searchPosts({ workspaceId: this.workspaceId, body, pageToken })
   }
 
+  searchCategory(body: IPostSearchReq, pageToken?: string) {
+    return api.searchCategory({ workspaceId: this.workspaceId, body, pageToken })
+  }
+
   deletePost(postId: string) {
     return api.deletePostApi({ workspaceId: this.workspaceId, postId })
   }
