@@ -145,3 +145,12 @@ export const getCommentsApi = ({
     .get(`${POSTS_API_URL}/pages/${workspaceId}/posts/${id}/comments${token}`)
     .catch(err => generateError(err));
 }
+
+export const getUserRegionApi = ({
+  workspaceId,
+  city
+}: any) => (
+  getAxiosInstance()
+    .get(`${POSTS_API_URL}/pages/${workspaceId}/locations/cities/${city}`)
+    .catch(err => generateError(err))
+)

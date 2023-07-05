@@ -72,4 +72,8 @@ export default class Posts {
   getComments(id: string | number, pageToken?: string) {
     return api.getCommentsApi({ workspaceId: this.workspaceId, id, pageToken })
   }
+
+  getUserRegion(city: string) {
+    return api.getUserRegionApi({ workspaceId: this.workspaceId, city })
+  }
 }

@@ -72,6 +72,9 @@ export interface IPosts {
     id: string | number,
     body: any
   ) => Promise<void | AxiosResponse<any>>;
+  getUserRegion: (
+    city: string,
+  ) => Promise<void | AxiosResponse<any>>;
 }
 
 export interface IUsers {
